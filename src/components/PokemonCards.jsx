@@ -1,5 +1,4 @@
-function PokemonCards(props) {
-  const pokemon = props
+function PokemonCards({pokemon}) {
   return (
     <figure>
      {pokemon.imgSrc !=null ? (
