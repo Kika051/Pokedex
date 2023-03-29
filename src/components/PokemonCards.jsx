@@ -18,4 +18,5 @@ PokemonCards.propTypes = {
     imgSrc: PropTypes.string
   }).isRequired
 }
- export default PokemonCards
+
+export default PokemonCards
