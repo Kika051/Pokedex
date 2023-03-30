@@ -1,7 +1,15 @@
-function Navbar (props){
-return (<>
-              <button onClick={props.handlePreviousClick}>Précédent</button>
-      <button onClick={props.handleNextClick}>Suivant</button>
-</>)
+function Navbar(props) {
+  return (
+    <>
+      <button
+        key={props.pokemonNumber}
+        onClick={() => {
+          props.setPokemonNumber(props.pokemonNumber);
+        }}
+      >
+        {props.pokemon}
+      </button>
+    </>
+  );
 }
-export default Navbar
+export default Navbar;

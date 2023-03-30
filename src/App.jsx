@@ -5,17 +5,15 @@ import Navbar from './components/Navbar';
 function App() {
   const [pokemonNumber, setPokemonNumber] = useState(0);
 
-  const handleNextClick = () => {
-    setPokemonNumber(pokemonNumber + 1)
-  }
   
-  const handlePreviousClick = () => {
-    setPokemonNumber(pokemonNumber - 1)
-  }
+  
+
   return (
     <div> 
       <PokemonCards pokemon={pokemonList[pokemonNumber]}/>
-      <Navbar handleNextClick={handleNextClick} handlePreviousClick={handlePreviousClick} />
+      {pokemonList.map((pokemon, numPok)=>(
+         <Navbar pokemon={pokemon.name} pokemonNumber={numPok} setPokemonNumber = {setPokemonNumber} />
+      ))}
     </div>
   )
   
